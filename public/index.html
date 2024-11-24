@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>网络教室</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="toolbar">
+        <div class="tool-group">
+            <button id="pencil" class="tool active">铅笔</button>
+            <button id="brush" class="tool">毛笔</button>
+            <button id="marker" class="tool">马克笔</button>
+            <button id="eraser" class="tool">橡皮擦</button>
+        </div>
+        <div class="color-group">
+            <input type="color" id="colorPicker" value="#000000">
+            <span>颜色</span>
+        </div>
+        <div class="size-group">
+            <input type="range" id="sizeSlider" min="1" max="50" value="5">
+            <span>笔刷大小</span>
+        </div>
+        <button id="clear" class="action">清空画布</button>
+    </div>
+    <canvas id="drawingCanvas"></canvas>
+
+    <script src="/socket.io/socket.io.js"></script>
+    <script src="app.js"></script>
+</body>
+</html>

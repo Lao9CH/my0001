@@ -1,0 +1,79 @@
+body {
+    margin: 0;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    background-color: #f0f0f0;
+    font-family: Arial, sans-serif;
+}
+
+.toolbar {
+    background-color: #fff;
+    padding: 10px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    margin-bottom: 20px;
+    display: flex;
+    gap: 20px;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.tool-group, .color-group, .size-group {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.tool {
+    padding: 8px 16px;
+    border: none;
+    border-radius: 4px;
+    background-color: #f0f0f0;
+    cursor: pointer;
+    transition: all 0.3s;
+}
+
+.tool:hover {
+    background-color: #e0e0e0;
+}
+
+.tool.active {
+    background-color: #007bff;
+    color: white;
+}
+
+#colorPicker {
+    width: 50px;
+    height: 30px;
+    padding: 0;
+    border: none;
+    border-radius: 4px;
+}
+
+#sizeSlider {
+    width: 100px;
+}
+
+.action {
+    padding: 8px 16px;
+    border: none;
+    border-radius: 4px;
+    background-color: #dc3545;
+    color: white;
+    cursor: pointer;
+    transition: all 0.3s;
+}
+
+.action:hover {
+    background-color: #c82333;
+}
+
+#drawingCanvas {
+    flex-grow: 1;
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    touch-action: none; /* 防止触摸屏上的默认行为 */
+}
